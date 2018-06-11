@@ -1,0 +1,33 @@
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>収入⇔自家用車</title>
+</head>
+<body>
+<h1>その収入でその車買えるの？</h1>
+<br>
+<h3>夢のカーライフを実現できるか判定するよ</h3>
+<br>
+
+<form method="post" th:action="@{/post}">
+  月収<input type="number" name="income" placeholder="月収" />万円<br>
+ 家賃<input type="number" name="rent" placeholder="家賃" />万円<br>
+光熱費<input type="number" name="utility_c" placeholder="光熱費" />万円<br>
+ 通信費<input type="number" name="commu_c" placeholder="通信費" />万円<br>
+  <input type="submit" />
+</form>
+
+
+<br>
+<div th:each = "Hensu:${users}">			<!--  	＄{java側と同じ名前に}-->			
+	<li><span th:text="${Hensu.income}">20</span>月収 </li>	<!--  {変数名.列名}-->
+	<li><span th:text="${Hensu.rent}">20</span>家賃 </li>
+	<li><span th:text="${Hensu.utility_c}">20</span>光熱費 </li>
+	<li><span th:text="${Hensu.commu_c}">20</span>通信費 </li>
+
+</div>
+
+
+
+</body>
+</html>
