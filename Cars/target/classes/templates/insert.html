@@ -9,13 +9,26 @@
 <h3>夢のカーライフを実現できるか判定するよ</h3>
 <br>
 
-<form method="post" th:action="@{/post}">
-  月収<input type="number" name="income" placeholder="月収" />万円<br>
- 家賃<input type="number" name="rent" placeholder="家賃" />万円<br>
-光熱費<input type="number" name="utility_c" placeholder="光熱費" />万円<br>
- 通信費<input type="number" name="commu_c" placeholder="通信費" />万円<br>
-  <input type="submit" />
+<form method="post" th:action="@{/post}">　<!-- user情報取得　usespec TABLEへ -->
+
+	<p>月収</p>
+	<input type="number" name="income" placeholder="月収" >万円
+	
+ 	 <p>家賃</p>
+ 	 <input type="number" name="rent" placeholder="家賃" />万円
+ 
+	<p>光熱費</p>
+	<input type="number" name="utility_c" placeholder="光熱費" />万円<br>
+	
+ 	<p>通信費</p>
+ 	<input type="number" name="commu_c" placeholder="通信費" />万円<br>
+ 	
+ 	 <input type="submit" value = 送信>
+ 	 
 </form>
+
+
+
 
 
 <br>

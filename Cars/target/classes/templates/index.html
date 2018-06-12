@@ -14,11 +14,14 @@
 <br>
 <TABLE> 
 <table border="1" cellpadding="0" width="10">
- <TR ALIGN=CENTER VALIGN=TOP> 
-  <TD>[MercedesBenz S550]<BR><IMG SRC="C:\Users\skawarasaki\Desktop\アプリ研修関連\画像\s5501.jpg" ></TD> 
-  <TD>[Phantom]<BR><IMG SRC="C:\Users\skawarasaki\Desktop\アプリ研修関連\画像\lx11.jpg" ></TD> 
-  <TD>[NISSAN GT-R]<BR><IMG SRC="C:\Users\skawarasaki\Desktop\アプリ研修関連\画像\gtr1.jpg"></TD> 
- </TR> 
+ 	<TR ALIGN=CENTER VALIGN=TOP> 
+ 	<!--   <TD>[MercedesBenz S550]<BR><a href="inserts550.html"><IMG SRC ="s5501.jpg" ></img></a></TD> -->
+ 	<!--   <TD>[MercedesBenz S550]<BR><form method="get" th:action="@{/post}"><IMG SRC ="s5501.jpg" ></img></form></TD> -->
+ 	
+	<TD>[MercedesBenz S550]<BR><a th:href ="@{/insert/{8}}"  ><IMG SRC ="s5501.jpg" ></img></a></TD><!-- データベースidと紐づける -->
+	<TD>[Lexsus LX]<BR><a th:href ="@{/insert/{7}}"  ><IMG SRC ="lx11.jpg" ></img></a></TD> 
+  	<TD>[NISSAN GT-R]<BR><a th:href ="@{/insert/{2}}"  ><IMG SRC ="gtr1.jpg" ></img></a></TD> 
+ 	</TR> 
  </TABLE>
  <br>
  <br>
@@ -28,10 +31,10 @@
  <br>
  <TABLE> 
 <table border="1" cellpadding="0" width="10">
- <TR ALIGN=CENTER VALIGN=TOP> 
-  <TD>[TOYOTA Alpad]<BR><IMG SRC="C:\Users\skawarasaki\Desktop\アプリ研修関連\画像\alphad11.jpg" ></TD> 
-  <TD>[BMW 318i]<BR><IMG SRC="C:\Users\skawarasaki\Desktop\アプリ研修関連\画像\bmw31.jpg" ></TD> 
-  <TD>[SUBARU WRX STI]<BR><IMG SRC="C:\Users\skawarasaki\Desktop\アプリ研修関連\画像\wrxsti11.jpg"></TD> 
+	 <TR ALIGN=CENTER VALIGN=TOP>
+	 <TD>[TOYOTA Alphard]<BR><a th:href ="@{/insert/{9}}"  ><IMG SRC ="alphad11.jpg" ></img></a></TD>
+	 <TD>[BMW 318i]<BR><a th:href ="@{/insert/{10}}"  ><IMG SRC ="bmw31.jpg" ></img></a></TD>
+	 <TD>[SUBARU WRX STI]<BR><a th:href ="@{/insert/{1}}"  ><IMG SRC ="wrxsti11.jpg" ></img></a></TD> 
  </TR> 
  </table>
 
@@ -43,9 +46,9 @@
  <TABLE>  
 <table border="1" cellpadding="0" width="10">
  <TR ALIGN=CENTER VALIGN=TOP> 
-  <TD>[TOYOTA PRIUS]<BR><IMG SRC="C:\Users\skawarasaki\Desktop\アプリ研修関連\画像\prius11.jpg" ></TD> 
-  <TD>[NISSAN X-trail]<BR><IMG SRC="C:\Users\skawarasaki\Desktop\アプリ研修関連\画像\xtrail11.jpg" ></TD> 
-  <TD>[SUZUKI SwiftSports]<BR><IMG SRC="C:\Users\skawarasaki\Desktop\アプリ研修関連\画像\swift11.jpg"></TD> 
+  <TD>[TOYOTA PRIUS]<BR><a th:href ="@{/insert/{11}}"  ><IMG SRC ="prius11.jpg" ></img></a></TD>
+  <TD>[NISSAN X-trail]<BR><a th:href ="@{/insert/{12}}"  ><IMG SRC ="xtrail11.jpg" ></img></a></TD> 
+  <TD>[SUZUKI SwiftSports]<BR><a th:href ="@{/insert/{3}}"  ><IMG SRC ="swift11.jpg" ></img></a></TD> 
  </TR> 
 </table>
 
@@ -56,10 +59,10 @@
 <br>
  <TABLE> 
 <table border="1" cellpadding="0" width="10">
- <TR ALIGN=CENTER VALIGN=TOP> 
-  <TD>[TOYOTA AQUA]<BR><IMG SRC="C:\Users\skawarasaki\Desktop\アプリ研修関連\画像\aqua11.jpg" ></TD> 
-  <TD>[SUZUKI HUSTLER]<BR><IMG SRC="C:\Users\skawarasaki\Desktop\アプリ研修関連\画像\hustler11.jpg" ></TD> 
-  <TD>[DAIHATSU ]<BR><IMG SRC="C:\Users\skawarasaki\Desktop\アプリ研修関連\画像\copen11.jpg"></TD> 
+	<TR ALIGN=CENTER VALIGN=TOP>
+	<TD>[TOYOTA AQUA]<BR><a th:href ="@{/insert/{5}}"  ><IMG SRC ="aqua11.jpg" ></img></a></TD>
+	<TD>[SUZUKI HUSTLER]<BR><a th:href ="@{/insert/{6}}"  ><IMG SRC ="hustler11.jpg" ></img></a></TD>
+	<TD>[DAIHATSU ]<BR><a th:href ="@{/insert/{4}}"  ><IMG SRC ="copen11.jpg" ></img></a></TD> 
  </TR> 
 </table>
 
