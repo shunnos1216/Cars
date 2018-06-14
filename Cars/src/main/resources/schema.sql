@@ -32,13 +32,19 @@
  	(7,  6.5), (8, 6.7), (9, 11.6), (10, 13.2), (11,37.2), (12, 16.0);
  
  
- 
-CREATE TABLE userspec(
- 	income FLOAT,rent FLOAT, utility_c FLOAT, commu_c FLOAT, budget FLOAT);
+
  	 	
- 	
-/* あとでuser id 設定する　CREATE TABLE userspec(
- 	user_id INT AUTO_INCREMENT, income FLOAT,rent FLOAT, utility_c FLOAT, commu_c FLOAT, budget FLOAT
- 	PRIMARY KEY(user_id));*/
+/* 	ユーザー情報入力用テーブル*/
+　CREATE TABLE userspec(
+ 	user_name VARCHAR(200), income FLOAT,rent FLOAT, utility_c FLOAT, commu_c FLOAT, budget FLOAT,
+ 	parking FLOAT,running FLOAT, loan INT,PRIMARY KEY(user_name));
  	
  
+/* 	ユーザー情報入力用テーブル2*/
+/*　CREATE TABLE user_cost(
+ 	user_id INT, parking FLOAT,running FLOAT, loan INT,
+ 	PRIMARY KEY(user_id));*/
+ 	 
+ /* 
+CREATE TABLE userspec(
+ 	income FLOAT,rent FLOAT, utility_c FLOAT, commu_c FLOAT, budget FLOAT);*/
