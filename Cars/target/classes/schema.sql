@@ -36,7 +36,7 @@
  	 	
 /* 	ユーザー情報入力用テーブル*/
 　CREATE TABLE userspec(
- 	user_name VARCHAR(200), income FLOAT,rent FLOAT, utility_c FLOAT, commu_c FLOAT, budget FLOAT,
+ 	 user_name VARCHAR(200), income FLOAT,rent FLOAT, utility_c FLOAT, commu_c FLOAT, budget FLOAT,
  	parking FLOAT,running FLOAT, loan INT,PRIMARY KEY(user_name));
  	
  
