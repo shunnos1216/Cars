@@ -70,14 +70,14 @@ public class Carscontroller {
 	    attr.addFlashAttribute("rent", rent);
 	    attr.addFlashAttribute("utility_c", utility_c);
 	    attr.addFlashAttribute("commu_c", commu_c);
-	    //attr.addFlashAttribute("type", type);	
+	    //attr.addFlashAttribute("car_id", car_id);	
 	    //確認用2
 		System.out.println(user_name);
 	    System.out.println(income);
 	    System.out.println(rent);
 	    System.out.println(utility_c);
 	    System.out.println(commu_c);
-	    //System.out.println(type);
+	    //System.out.println(car_id);
 	    
 		jdbc.update("INSERT INTO userspec (user_name,income,rent,utility_c,commu_c) values(?,?,?,?,?);",
 				user_name,income,rent,utility_c,commu_c); //DB userspec TABLEに格納
