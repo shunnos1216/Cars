@@ -23,11 +23,13 @@ public class Carscontroller {
 		return "index";
 	}
 	
-	@GetMapping("/balance/{type}")//indexよりinsertページ遷移・車種別のID取得
+	@GetMapping("/balance/{car_id}")//indexよりinsertページ遷移・車種別のID取得
 	
-	public String insert(@PathVariable("type") String type, Model model) {
+	public String insert(@PathVariable("car_id") String type, Model model) {
 		
-		System.out.println("type:" + type);	//車種別のID取得確認
+		System.out.println("car_id:" + type);	//車種別のID取得確認
+		
+		
 		
 
 	return "balance";
@@ -68,13 +70,14 @@ public class Carscontroller {
 	    attr.addFlashAttribute("rent", rent);
 	    attr.addFlashAttribute("utility_c", utility_c);
 	    attr.addFlashAttribute("commu_c", commu_c);
-	    
+	    //attr.addFlashAttribute("type", type);	
 	    //確認用2
 		System.out.println(user_name);
 	    System.out.println(income);
 	    System.out.println(rent);
 	    System.out.println(utility_c);
 	    System.out.println(commu_c);
+	    //System.out.println(type);
 	    
 		jdbc.update("INSERT INTO userspec (user_name,income,rent,utility_c,commu_c) values(?,?,?,?,?);",
 				user_name,income,rent,utility_c,commu_c); //DB userspec TABLEに格納
@@ -133,7 +136,7 @@ public class Carscontroller {
 		System.out.println("checked calculation");//確認用
 		
 		
-		List<Map<String,Object>> incomee = jdbc.queryForList("SELECT * FROM userspec where user_name");//DBに格納されたユーザー収支情報を取得
+		List<Map<String,Object>> incomee = jdbc.queryForList("SELECT * FROM userspec");//DBに格納されたユーザー収支情報を取得
 		//List<Map<String,Object>> incomee = (List<Map<String, Object>>) jdbc.queryForList("SELECT * FROM userspec where user_name").get(0).get("income");
 		
 		System.out.println(incomee);
@@ -148,7 +151,7 @@ public class Carscontroller {
 	    ////Map<String, Object> person = jdbc.queryForMap("SELECT * FROM userspec where name = ?", name).get(0);
 
 	    
-		return "redirect:/result";
+		return "redirect:/calculation";
 		 
 	}
 	
