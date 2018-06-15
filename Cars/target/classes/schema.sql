@@ -14,16 +14,16 @@
  	
 /* 	価格表*/
  CREATE TABLE price(
- 	id INT, price INT  
+ 	car_id INT, price FLOAT  
  	); 	
  /*価格（万円）*/
  INSERT INTO price VALUES
- 	(1, 450), (2, 1170), (3, 183), (4, 187), (5, 188), (6, 135),
- 	(7, 1115), (8, 1360), (9,370), (10, 457), (11, 278), (12, 240);
+ 	(1, 450.0), (2, 1170.0), (3, 183.0), (4, 187.0), (5, 188.0), (6, 135.0),
+ 	(7, 1115.0), (8, 1360.0), (9,370.0), (10, 457.0), (11, 278.0), (12, 240.0);
  
  /*燃費表*/
  CREATE TABLE fuel(
- 	id INT, fuel_ec FLOAT  
+ 	car_id INT, fuel_ec FLOAT  
  	); 
  
  /*(km/l)*/
@@ -37,7 +37,7 @@
 /* 	ユーザー情報入力用テーブル*/
 　CREATE TABLE userspec(
  	user_name VARCHAR(200), income FLOAT,rent FLOAT, utility_c FLOAT, commu_c FLOAT, budget FLOAT,
- 	parking FLOAT,running FLOAT, loan INT,PRIMARY KEY(user_name));
+ 	parking FLOAT,running FLOAT, loan FLOAT,PRIMARY KEY(user_name));
  	
  
 /* 	ユーザー情報入力用テーブル2*/
